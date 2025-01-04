@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>News Generator</h1>
+            <p>Your source for personalized news</p>
+        </header>
+
+        <main class="container">
+            <div id="authContainer" class="card fade-in">
+                <h2>Welcome Back</h2>
+                <form id="authForm">
+                    <div class="input-group">
+                        <input type="email" id="email" placeholder=" " required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="password" placeholder=" " required>
+                        <label for="password">Password</label>
+                    </div>
+                    <button type="submit" class="btn-primary">Log In</button>
+                </form>
+                <p class="text-center" style="margin-top: 1rem;">
+                    Don't have an account? <a href="#" id="showSignup" style="color: var(--accent-secondary);">Sign up</a>
+                </p>
+            </div>
+
+            <div id="signupContainer" class="card fade-in hidden">
+                <h2>Create Account</h2>
+                <form id="signupForm">
+                    <div class="input-group">
+                        <input type="text" id="name" placeholder=" " required>
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="signupEmail" placeholder=" " required>
+                        <label for="signupEmail">Email</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="signupPassword" placeholder=" " required>
+                        <label for="signupPassword">Password</label>
+                    </div>
+                    <button type="submit" class="btn-primary">Sign Up</button>
+                </form>
+                <p class="text-center" style="margin-top: 1rem;">
+                    Already have an account? <a href="#" id="showLogin" style="color: var(--accent-secondary);">Log in</a>
+                </p>
+            </div>
+
+            <div id="userInfo" class="card fade-in hidden">
+                <h2>Welcome, <span id="userName"></span></h2>
+                <p style="margin-bottom: 1rem;">Email: <span id="userEmail"></span></p>
+                <button id="logoutBtn" class="btn-secondary">Logout</button>
+            </div>
+
+            <div id="preferencesContainer" class="card fade-in hidden">
+                <h2>Select Your Interests</h2>
+                <form id="preferencesForm">
+                    <div class="preferences-grid">
+                        <div class="preference-item">
+                            <input type="checkbox" id="business" value="business">
+                            <label for="business">Business</label>
+                        </div>
+                        <div class="preference-item">
+                            <input type="checkbox" id="technology" value="technology">
+                            <label for="technology">Technology</label>
+                        </div>
+                        <div class="preference-item">
+                            <input type="checkbox" id="sports" value="sports">
+                            <label for="sports">Sports</label>
+                        </div>
+                        <div class="preference-item">
+                            <input type="checkbox" id="entertainment" value="entertainment">
+                            <label for="entertainment">Entertainment</label>
+                        </div>
+                        <div class="preference-item">
+                            <input type="checkbox" id="science" value="science">
+                            <label for="science">Science</label>
+                        </div>
+                        <div class="preference-item">
+                            <input type="checkbox" id="health" value="health">
+                            <label for="health">Health</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-primary">Start Reading</button>
+                </form>
+            </div>
+        </main>
+
+        <div id="newsContainer" class="container fade-in hidden"></div>
+        
+        <footer>
+            <p>&copy; 2023 News Generator. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
